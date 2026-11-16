@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RWA Ledger</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header class="mast">
+    <div class="mast-id">
+      <p class="eyebrow">Real-world asset book</p>
+      <h1>RWA Ledger</h1>
+    </div>
+    <div class="mast-actions">
+      <span class="stamp">Indicative</span>
+      <button id="refresh" type="button">Refresh marks</button>
+    </div>
+  </header>
+
+  <main>
+    <p id="status" class="status" role="status">Pulling ECB, Treasury, and CoinGecko marks.</p>
+    <section id="kpis" class="kpis" hidden></section>
+    <div class="table-wrap">
+      <table>
+        <caption class="sr">Portfolio positions marked in US dollars</caption>
+        <thead>
+          <tr>
+            <th scope="col">Asset</th>
+            <th scope="col">Class</th>
+            <th scope="col">Basis</th>
+            <th scope="col">Move</th>
+            <th scope="col" class="num">NAV</th>
+          </tr>
+        </thead>
+        <tbody id="positions"></tbody>
+      </table>
+    </div>
+    <section id="markets" class="markets" hidden></section>
+    <p id="disclaimer" class="disclaimer"></p>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
